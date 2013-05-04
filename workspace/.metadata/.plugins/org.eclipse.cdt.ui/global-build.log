@@ -1,0 +1,5 @@
+19:40:33 **** Rebuild of configuration Debug for project DemoC ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\DemoC.o" "..\\src\\DemoC.c" 
+gcc -o DemoC.exe "src\\DemoC.o" 
+Info: Nothing to build for DemoC
