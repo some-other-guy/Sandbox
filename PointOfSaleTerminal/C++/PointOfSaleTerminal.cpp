@@ -64,8 +64,8 @@ double PointOfSaleTerminal::calculateTotal()
         if( 1 < volumeQuantity && ( itr->second >= volumeQuantity ))
         {
             // calculate how many times we need to count the volume pricing vs single pricing
-            uint32_t singleUnits = itr->second % _prices.getVolumeQuantity( itr->first );
-            uint32_t volumeUnits = ( itr->second - singleUnits ) / _prices.getVolumeQuantity( itr->first );
+            uint32_t singleUnits = itr->second % volumeQuantity;
+            uint32_t volumeUnits = ( itr->second - singleUnits ) / volumeQuantity;
 
             total += volumeUnits * _prices.getVolumeUnitPricing( itr->first );
             total += singleUnits * _prices.getSingleUnitPriceing( itr->first );
