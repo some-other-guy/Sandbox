@@ -1,0 +1,6 @@
+pricefile.txt
+E
+F
+G
+H
+I

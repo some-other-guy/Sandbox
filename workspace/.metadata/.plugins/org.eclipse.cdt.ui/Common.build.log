@@ -1,8 +1,0 @@
-10:44:34 **** Rebuild of configuration Debug for project Common ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Deck.o" "..\\src\\Deck.cpp" 
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
-g++ -o Common.exe "src\\main.o" "src\\Deck.o" 
-
-10:44:35 Build Finished (took 668ms)
-

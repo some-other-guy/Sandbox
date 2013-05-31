@@ -1,6 +1,0 @@
-21:59:31 **** Incremental Build of configuration Debug for project msvcTest ****
-Info: Internal Builder is used for build
-link /debug /nologo /OUT:msvcTest.exe test.obj 
-
-21:59:31 Build Finished (took 135ms)
-

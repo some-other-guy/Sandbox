@@ -1,0 +1,5 @@
+pricefile.txt
+A
+B
+C
+D
