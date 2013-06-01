@@ -1,5 +1,5 @@
 /*
- * This class is a placeholder class for some logging functions that can be added.
+ * This class is a place holder class for some logging functions that can be added.
  * Right now it simply dumps any log data to std::cout
  */
 
@@ -14,7 +14,7 @@ public:
     Logger( std::string loggerName );
     virtual ~Logger();
     
-    // Simple method that displays the message to the console allong with the callers identifying string.
+    // Simple method that displays the message to the console along with the callers identifying string.
     void Log( std::string message );
 
 private:
