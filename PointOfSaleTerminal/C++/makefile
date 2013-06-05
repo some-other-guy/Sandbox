@@ -20,23 +20,23 @@ PointOfSaleTerminal: TestMain.o Logger.o_Release PointOfSaleTerminal.o Item.o Pr
 PointOfSaleTerminalLog: TestMain.o Logger.o_Debug PointOfSaleTerminal.o Item.o PricingManager.o
 	g++ TestMain.o Logger.o PointOfSaleTerminal.o Item.o PricingManager.o -o PointOfSaleTerminal
 
-TestMain.o: TestMain.cpp
-	g++ -I. -c TestMain.cpp
+TestMain.o:
+	g++ -I. -c src/TestMain.cpp
 
 Logger.o_Release:
-	g++ -I. -c Logger.cpp
+	g++ -I. -c src/Logger.cpp
 
 Logger.o_Debug:
-	g++ -I. -c Logger.cpp -DLOGGING_ENABLED
+	g++ -I. -c src/Logger.cpp -DLOGGING_ENABLED
 	
 PointOfSaleTerminal.o:
-	g++ -I. -c PointOfSaleTerminal.cpp
+	g++ -I. -c src/PointOfSaleTerminal.cpp
 	
 Item.o:
-	g++ -I. -c Item.cpp
+	g++ -I. -c src/Item.cpp
 	
 PricingManager.o:
-	g++ -I. -c PricingManager.cpp
+	g++ -I. -c src/PricingManager.cpp
 
 cleanLinux: clean
 	rm -rf linux/PointOfSaleTerminal linux/PointOfSaleTerminal_DEBUG
