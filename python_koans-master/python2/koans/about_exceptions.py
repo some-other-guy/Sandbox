@@ -23,15 +23,15 @@ class AboutExceptions(Koan):
         except StandardError as ex:
             result = 'exception handled'
 
-        self.assertEqual(__, result)
+        self.assertEqual('exception handled', result)
 
-        self.assertEqual(____, isinstance(ex, StandardError))
-        self.assertEqual(____, isinstance(ex, RuntimeError))
+        self.assertEqual(True, isinstance(ex, StandardError))
+        self.assertEqual(False, isinstance(ex, RuntimeError))
 
         self.assertTrue(issubclass(RuntimeError, StandardError), \
             "RuntimeError is a subclass of StandardError")
 
-        self.assertEqual(__, ex[0])
+        self.assertEqual("Oops", ex[0])
 
     def test_raising_a_specific_error(self):
         result = None
@@ -40,8 +40,8 @@ class AboutExceptions(Koan):
         except self.MySpecialError as ex:
             result = 'exception handled'
 
-        self.assertEqual(__, result)
-        self.assertEqual(__, ex[0])
+        self.assertEqual('exception handled', result)
+        self.assertEqual("My Message", ex[0])
 
     def test_else_clause(self):
         result = None
@@ -53,7 +53,7 @@ class AboutExceptions(Koan):
         else:
             result = 'no damage done'
 
-        self.assertEqual(__, result)
+        self.assertEqual('no damage done', result)
 
     def test_finally_clause(self):
         result = None
@@ -65,4 +65,4 @@ class AboutExceptions(Koan):
         finally:
             result = 'always run'
 
-        self.assertEqual(__, result)
+        self.assertEqual('always run', result)
